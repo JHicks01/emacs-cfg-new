@@ -2,14 +2,20 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(set-face-attribute 'default nil :font "JetBrains Mono-11")
+(set-face-attribute 'default nil :font "JetBrains Mono-12")
 
-(use-package ef-themes
+(use-package modus-themes
   :config
-  (load-theme 'ef-dark t))
+  (setq modus-themes-common-palette-overrides
+        '((fg-line-number-inactive "gray50")
+          (fg-line-number-active fg-main)
+          (bg-line-number-inactive unspecified)
+          (bg-line-number-active unspecified)))
+  (load-theme 'modus-vivendi t))
 
 (use-package spacious-padding
   :config
+  (setq spacious-padding-subtle-mode-line t)
   (spacious-padding-mode t))
 
 (setq-default mode-line-format
