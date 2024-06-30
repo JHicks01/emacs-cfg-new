@@ -14,6 +14,8 @@
 (global-auto-revert-mode t)
 (setq c-basic-offset 2)
 
+(setq compilation-scroll-output 'first-error)
+
 (recentf-mode t)
 (setq recentf-max-saved-items 500)
 

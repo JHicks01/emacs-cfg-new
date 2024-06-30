@@ -1,6 +1,7 @@
 (use-package company
   :hook (after-init . global-company-mode)
   :custom
+  (company-global-modes '(not org-mode))
   (company-idle-delay 0))
 
 (use-package consult

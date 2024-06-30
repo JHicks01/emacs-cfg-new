@@ -4,22 +4,15 @@
 
 (set-face-attribute 'default nil :font "JetBrains Mono-12")
 
-(use-package modus-themes
+(use-package catppuccin-theme
   :config
-  (setq modus-themes-common-palette-overrides
-        '((fg-line-number-inactive "gray50")
-          (fg-line-number-active fg-main)
-          (bg-line-number-inactive unspecified)
-          (bg-line-number-active unspecified)))
-  (load-theme 'modus-vivendi t))
+  (load-theme 'catppuccin t))
 
-(use-package spacious-padding
+(use-package doom-modeline
   :config
-  (setq spacious-padding-subtle-mode-line t)
-  (spacious-padding-mode t))
+  (doom-modeline-mode))
 
-(setq-default mode-line-format
-'("%e" mode-line-front-space mode-line-modified mode-line-frame-identification mode-line-buffer-identification "   " mode-line-position evil-mode-line-tag (vc-mode vc-mode) mode-line-end-spaces))
+(setq ns-use-proxy-icon nil)
 
 (setq-default display-line-numbers-type 'relative)
 (setq-default display-line-numbers-width-start t)
